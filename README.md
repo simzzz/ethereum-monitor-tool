@@ -29,4 +29,4 @@
 }
 ```
 
-To change default configuration loo at defaultConfig.json. We should have at least 1 rule set.
+To change default configuration look at defaultConfig.json. We should have at least 1 rule.
