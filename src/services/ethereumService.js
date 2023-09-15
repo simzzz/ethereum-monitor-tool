@@ -18,7 +18,7 @@ function createEthereumService({
         fromAddress: transaction.from,
         toAddress: transaction.to,
         value: transaction.value.toString(),
-        configurationId: currentConfig.id
+        configurationName: currentConfig.name
       });
 
       logger.info(

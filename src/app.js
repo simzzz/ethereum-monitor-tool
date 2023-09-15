@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const container = require('./container');
+const logger = container.resolve('logger');
 
 const db = container.resolve('db');
 
@@ -18,7 +19,6 @@ const gracefulShutdown = async () => {
 db.connect()
   .then(() => {
     const app = express();
-    const logger = container.resolve('logger');
     const errorHandler = container.resolve('errorHandler');
 
     app.use(express.json());
@@ -37,7 +37,6 @@ db.connect()
     });
   })
   .catch((error) => {
-    const logger = container.resolve('logger');
     logger.error('Failed to start application:', error);
   });
 
