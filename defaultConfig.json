@@ -1,0 +1,7 @@
+{
+  "name": "Default",
+  "rules": {
+    "minValue": "1000000000000000000"
+  },
+  "blockDelay": 0
+}
